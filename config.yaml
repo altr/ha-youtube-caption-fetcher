@@ -1,0 +1,20 @@
+name: "YouTube Caption Fetcher"
+description: "Fetches YouTube captions for the Summaries app via residential IP, bypassing Cloud Run IP blocks."
+version: "1.0.0"
+slug: "youtube_caption_fetcher"
+init: false
+arch:
+  - aarch64
+  - amd64
+ports:
+  3456/tcp: 3456
+ports_description:
+  3456/tcp: "Caption service HTTP"
+options:
+  api_key: "changeme"
+schema:
+  api_key: str
+# IMPORTANT: Change api_key to a strong random secret before exposing via Cloudflare Tunnel.
+# The key is stored on your Pi by Home Assistant — it is never in this repository.
+map:
+  - data:rw

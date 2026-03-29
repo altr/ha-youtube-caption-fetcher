@@ -1,0 +1,9 @@
+{
+  "name": "youtube-caption-fetcher",
+  "version": "1.0.0",
+  "description": "Residential-IP caption fetcher for Summaries app",
+  "main": "src/index.js",
+  "dependencies": {
+    "express": "^4.18.0"
+  }
+}
